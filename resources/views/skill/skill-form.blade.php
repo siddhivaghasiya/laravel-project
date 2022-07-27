@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Skill Form</h2>
+
+  <form action="{{route('skill.skill-update-form')}}" method="POST">
+    
+    @csrf
+
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" value="{{$obj->title}}" class="form-control" id="title" placeholder="Enter title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label>Tools:</label>
+      <input type="text" value="{{$obj->tools}}" class="form-control" id="tools" placeholder="Enter tools" name="tools">
+    </div>
+
+    <div class="form-group">
+      <label>Workflow:</label>
+      <input type="text" value="{{$obj->workflow}}" class="form-control" id="workflow" placeholder="Enter workflow" name="workflow">
+    </div>
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+
+  </form>
+</div>
+
+</body>
+</html>
