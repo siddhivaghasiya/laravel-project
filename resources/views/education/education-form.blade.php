@@ -43,6 +43,14 @@
       name="address">
     </div>
 
+    <div class="form-group">
+       <label >Status:</label>
+       <select  class="form-control" value="" name="status">  
+         <option value="">select ststus</option>
+         <option value="1" @if($obj->status == 1) selected @endif >active</option>
+         <option value="2" @if($obj->status == 2) selected @endif >inactive</option>
+      </select>
+    </div>
     
     
     <button type="submit" class="btn btn-default">Submit</button>

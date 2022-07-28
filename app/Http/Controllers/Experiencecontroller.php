@@ -22,6 +22,7 @@ class Experiencecontroller extends Controller
      $obj->date = $request->date;
      $obj->address = $request->address;
      $obj->description = $request->description;     /**database field name/form name**/
+     $obj->status = $request->status;     /**database field name/form name**/
      $obj->save();
 
      return redirect()->route('experience.experience-form');

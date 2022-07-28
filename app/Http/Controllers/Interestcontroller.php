@@ -18,7 +18,8 @@ class Interestcontroller extends Controller
 
      $obj = \App\Models\Interest::first();
      $obj->title = $request->title;
-     $obj->description = $request->description;     /**database field name/form name**/
+     $obj->description = $request->description;
+     $obj->status = $request->status;      /**database field name/form name**/
      $obj->save();
 
      return redirect()->route('interest.interest-form');

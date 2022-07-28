@@ -20,6 +20,7 @@ class Aboutcontroller extends Controller
      $obj->title = $request->title;
      $obj->address = $request->address;
      $obj->description = $request->description;     /**database field name/form name**/
+     $obj->status = $request->status;     /**database field name/form name**/
      $obj->save();
 
      return redirect()->route('about.about-form');

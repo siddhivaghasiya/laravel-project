@@ -50,3 +50,7 @@ Route::post('interest','\App\Http\Controllers\Interestcontroller@update')->name(
 Route::get('award','\App\Http\Controllers\Awardcontroller@create')->name('award.award-form');
 
 Route::post('award','\App\Http\Controllers\Awardcontroller@update')->name('award.award-update-form');
+
+
+
+Route::get('/','\App\Http\Controllers\Homecontroller@home')->name('index');

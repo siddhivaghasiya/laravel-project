@@ -22,7 +22,7 @@ class Educationcontroller extends Controller
      $obj->course = $request->course;  
      $obj->date = $request->date;
      $obj->address = $request->address;
-       /**database field name/form name**/
+     $obj->status = $request->status;  /**database field name/form name**/
      $obj->save();
 
      return redirect()->route('education.education-form');

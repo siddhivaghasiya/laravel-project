@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-  <h2>About Form</h2>
+  <h2>Award Form</h2>
 
   <form action="{{route('award.award-update-form')}}" method="POST">
     
@@ -25,6 +25,15 @@
     <div class="form-group">
       <label >Description:</label>
       <input type="text" value="{{$obj->description}}" class="form-control" id="description" placeholder="Enter description" name="description">
+    </div>
+
+    <div class="form-group">
+       <label >Status:</label>
+       <select  class="form-control" value="" name="status">  
+         <option value="">select ststus</option>
+         <option value="1" @if($obj->status == 1) selected @endif >active</option>
+         <option value="2" @if($obj->status == 2) selected @endif >inactive</option>
+      </select>
     </div>
     
     <button type="submit" class="btn btn-default">Submit</button>

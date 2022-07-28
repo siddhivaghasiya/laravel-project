@@ -19,7 +19,8 @@ class Skillcontroller extends Controller
      $obj = \App\Models\Skill::first();
      $obj->title = $request->title;
      $obj->tools = $request->tools;
-     $obj->workflow = $request->workflow;     /**database field name/form name**/
+     $obj->workflow = $request->workflow;
+     $obj->status = $request->status;      /**database field name/form name**/
      $obj->save();
 
      return redirect()->route('skill.skill-form');
